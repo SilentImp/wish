@@ -1,0 +1,81 @@
+main {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin-block-end: .5rem;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  margin-inline: auto;
+  width: min-content;
+
+}
+
+.wish {
+  display: grid;
+  grid-template-areas: "image title" "image description";
+  grid-template-columns: min-content 1fr;
+  gap: 0 1rem;
+  width: 100%;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+
+    grid-area: image;
+  }
+
+  figure {
+    display: contents;
+
+    figcaption {
+      grid-area: title;
+      margin-block-end: .5rem;
+
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: .25rem 1rem;
+    margin: 0;
+    padding: 0;
+
+    grid-area: description;
+  }
+
+  dt {
+    padding: 0;
+    margin: 0;
+  }
+
+  dd {
+    padding: 0;
+    margin: 0;
+
+    &:last-child {
+      font-weight: bold;
+    }
+  }
+}
